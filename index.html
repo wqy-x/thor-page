@@ -3,10 +3,10 @@
 <head>
   <meta charset="utf-8">
   <meta name="description"
-        content="Deformable Neural Radiance Fields creates free-viewpoint portraits (nerfies) from casually captured videos.">
-  <meta name="keywords" content="Nerfies, D-NeRF, NeRF">
+        content="Text to Human-Object Interaction Diffusion.">
+  <meta name="keywords" content="Text, human object interactions, diffusion">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Nerfies: Deformable Neural Radiance Fields</title>
+  <title>THOR: Text to Human-Object Interaction Diffusion via Relation Intervention</title>
 
   <!-- Global site tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
@@ -63,18 +63,19 @@
           More Research
         </a>
         <div class="navbar-dropdown">
-          <a class="navbar-item" href="https://hypernerf.github.io">
-            HyperNeRF
+          <a class="navbar-item" href="https://neu-vi.github.io/HOI-Diff/">
+            HOI-Diff
           </a>
-          <a class="navbar-item" href="https://nerfies.github.io">
-            Nerfies
+          <a class="navbar-item" href="https://lijiaman.github.io/projects/chois/">
+            CHOIS
           </a>
-          <a class="navbar-item" href="https://latentfusion.github.io">
-            LatentFusion
+          <a class="navbar-item" href="https://sirui-xu.github.io/InterDreamer/">
+            InterDreamer
           </a>
-          <a class="navbar-item" href="https://photoshape.github.io">
-            PhotoShape
+          <a class="navbar-item" href="https://www.christian-diller.de/projects/cg-hoi/">
+            CG-HOI
           </a>
+
         </div>
       </div>
     </div>
@@ -120,7 +121,7 @@
           <div class="column has-text-centered">
             <div class="publication-links">
               <!-- PDF Link. -->
-              <span class="link-block">
+              <!-- <span class="link-block">
                 <a href="https://arxiv.org/abs/2403.11208"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
@@ -137,7 +138,7 @@
                   </span>
                   <span>arXiv</span>
                 </a>
-              </span>
+              </span> -->
               <!-- Video Link. -->
               <!-- <span class="link-block">
                 <a href="https://www.youtube.com/watch?v=MrKrnHhk8IA"
@@ -194,52 +195,36 @@
       <div id="results-carousel" class="carousel results-carousel">
         <div class="item item-steve">
           <video poster="" id="steve" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/toby.mp4"
+            <source src="./static/videos/boxlarge_Date03_Sub04_boxlarge_split_3_usd_6d_seperatecond_model000400000.pt_The man carries the boxlarge with his left hand and walks clockwise..webm"
+
                     type="video/mp4">
           </video>
         </div>
         <div class="item item-chair-tp">
           <video poster="" id="chair-tp" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/chair-tp.mp4"
+            <source src="./static/videos/boxlong_Date07_Sub08_boxlong_split_2_usd_6d_seperatecond_model000400000.pt_The woman walks counterclockwise while holding the boxlong with both hands..webm"
                     type="video/mp4">
           </video>
         </div>
         <div class="item item-shiba">
           <video poster="" id="shiba" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/shiba.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-fullbody">
-          <video poster="" id="fullbody" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/fullbody.mp4"
+            <source src="./static/videos/yogaball_Date03_Sub03_yogaball_sit_split_6_usd_6d_seperatecond_model000400000.pt_The man stands up and walks counterclockwise around the yoga ball before sitting back down..webm"
                     type="video/mp4">
           </video>
         </div>
         <div class="item item-blueshirt">
           <video poster="" id="blueshirt" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/blueshirt.mp4"
+            <source src="./static/videos/chairwood_Date03_Sub05_chairwood_split_10_usd_6d_seperatecond_model000400000.pt_The man stands in front of the wood chair and leans forward, extending his right hand..webm"
                     type="video/mp4">
           </video>
         </div>
         <div class="item item-mask">
           <video poster="" id="mask" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/mask.mp4"
+            <source src="./static/videos/yogamat_Date03_Sub04_yogamat_split_3_usd_6d_seperatecond_model000400000.pt_The man holds the yogamat with both hands and rotates counterclockwise..webm"
                     type="video/mp4">
           </video>
         </div>
-        <div class="item item-coffee">
-          <video poster="" id="coffee" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/coffee.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-toby">
-          <video poster="" id="toby" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/toby2.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
+
       </div>
     </div>
   </div>
@@ -292,103 +277,104 @@ This paper addresses the challenging task of generating dynamic Human-Object Int
       <!-- Visual Effects. -->
       <div class="column">
         <div class="content">
-          <h2 class="title is-3">Visual Effects</h2>
-          <p>
-            Using <i>nerfies</i> you can create fun visual effects. This Dolly zoom effect
-            would be impossible without nerfies since it would require going through a wall.
-          </p>
-          <video id="dollyzoom" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/output.mp4"
-                    type="video/mp4">
-          </video>
+          <h2 class="title is-3">Generating human object interactions from textual descriptions</h2>
+          <div class="video-container" style="display: flex; flex-wrap: wrap; gap: 2%;">
+            <div style="width: 32%; margin-bottom: 2%; text-align: center;">
+              <video id="chairwood-lift" autoplay controls muted loop playsinline style="width: 100%;">
+                <source src="./static/videos/chairwood_Date05_Sub06_chairwood_lift_split_3_usd_6d_seperatecond_model000400000.pt_The woman puts down the wood chair backwards..webm"
+                        type="video/mp4">
+              </video>
+              <h2 style="font-size: 1em; margin-top: 10px; word-wrap: break-word;">The woman puts down the wood chair backwards.</h2>
+            </div>
+            
+            <div style="width: 32%; margin-bottom: 2%; text-align: center;">
+              <video id="yogaball-sit-1" autoplay controls muted loop playsinline style="width: 100%;">
+                <source src="./static/videos/yogaball_Date05_Sub06_yogaball_sit_split_2_usd_6d_seperatecond_model000400000.pt_The woman sits on the yoga ball and jumps clockwise..webm"
+                        type="video/mp4">
+              </video>
+              <h2 style="font-size: 1em; margin-top: 10px; word-wrap: break-word;">The woman sits on the yoga ball and jumps clockwise.</h2>
+            </div>
+
+            <div style="width: 32%; margin-bottom: 2%; text-align: center;">
+              <video id="stool-lift" autoplay controls muted loop playsinline style="width: 100%;">
+                <source src="./static/videos/stool_Date05_Sub06_stool_lift_split_7_usd_6d_seperatecond_model000400000.pt_The woman moves the stool with her feet..webm"
+                        type="video/mp4">
+              </video>
+              <h2 style="font-size: 1em; margin-top: 10px; word-wrap: break-word;">The woman moves the stool with her feet.</h2>
+            </div>
+
+            <div style="width: 32%; margin-bottom: 2%; text-align: center;">
+              <video id="boxmedium-move" autoplay controls muted loop playsinline style="width: 100%;">
+                <source src="./static/videos/boxmedium_Date05_Sub06_boxmedium_split_6_usd_6d_seperatecond_model000400000.pt_The woman puts the medium box on the ground, then moves it with her foot..webm"
+                        type="video/mp4">
+              </video>
+              <h2 style="font-size: 1em; margin-top: 10px; word-wrap: break-word;">The woman puts the medium box on the ground, then moves it with her foot.</h2>
+            </div>
+
+            <div style="width: 32%; margin-bottom: 2%; text-align: center;">
+              <video id="yogamat-lift" autoplay controls muted loop playsinline style="width: 100%;">
+                <source src="./static/videos/yogamat_Date05_Sub06_yogamat_split_4_usd_6d_seperatecond_model000400000.pt_The woman lifts the yogamat with both hands and turns around..webm"
+                        type="video/mp4">
+              </video>
+              <h2 style="font-size: 1em; margin-top: 10px; word-wrap: break-word;">The woman lifts the yogamat with both hands and turns around.</h2>
+            </div>
+
+            <div style="width: 32%; margin-bottom: 2%; text-align: center;">
+              <video id="chairwood-walk" autoplay controls muted loop playsinline style="width: 100%;">
+                <source src="./static/videos/chairwood_Date05_Sub05_chairwood_split_9_usd_6d_seperatecond_model000400000.pt_The man walks around with the wood chair in his left hand, then puts it down..webm"
+                        type="video/mp4">
+              </video>
+              <h2 style="font-size: 1em; margin-top: 10px; word-wrap: break-word;">The man walks around with the wood chair in his left hand, then puts it down.</h2>
+            </div>
+
+            <div style="width: 32%; margin-bottom: 2%; text-align: center;">
+              <video id="chairwood-lift-2" autoplay controls muted loop playsinline style="width: 100%;">
+                <source src="./static/videos/chairwood_Date05_Sub06_chairwood_lift_split_3_usd_6d_seperatecond_model000400000.pt_The woman puts down the wood chair backwards..webm"
+                        type="video/mp4">
+              </video>
+              <h2 style="font-size: 1em; margin-top: 10px; word-wrap: break-word;">The woman puts down the wood chair backwards.</h2>
+            </div>
+
+            <div style="width: 32%; margin-bottom: 2%; text-align: center;">
+              <video id="boxsmall-throw" autoplay controls muted loop playsinline style="width: 100%;">
+                <source src="./static/videos/boxsmall_Date05_Sub06_boxsmall_split_6_usd_6d_seperatecond_model000400000.pt_The woman throws the small box up with both hands while turning counterclockwise..webm"
+                        type="video/mp4">
+              </video>
+              <h2 style="font-size: 1em; margin-top: 10px; word-wrap: break-word;">The woman throws the small box up with both hands while turning counterclockwise.</h2>
+            </div>
+
+            <div style="width: 32%; margin-bottom: 2%; text-align: center;">
+              <video id="backpack-takeoff" autoplay controls muted loop playsinline style="width: 100%;">
+                <source src="./static/videos/backpack_Date04_Sub05_backpack_split_5_usd_6d_seperatecond_model000400000.pt_The man takes the backpack off his right shoulder and puts it on the ground..webm"
+                        type="video/mp4">
+              </video>
+              <h2 style="font-size: 1em; margin-top: 10px; word-wrap: break-word;">The man takes the backpack off his right shoulder and puts it on the ground.</h2>
+            </div>
+            <div style="width: 32%; margin-bottom: 2%; text-align: center;">
+              <video poster="" id="coffee" autoplay controls muted loop playsinline style="width: 100%;">
+                <source src="./static/videos/plasticcontainer_Date03_Sub04_plasticcontainer_lift_split_1_usd_6d_seperatecond_model000400000.pt_The man swings the plastic container back and forth with his left hand..webm"
+                        type="video/mp4">
+              </video>
+              <h2 style="font-size: 1em; margin-top: 10px; word-wrap: break-word;">The man swings the plastic container back and forth with his left hand.</h2>
+            </div>
+            <div style="width: 32%; margin-bottom: 2%; text-align: center;">
+              <video poster="" id="toby" autoplay controls muted loop playsinline style="width: 100%;">
+                <source src="./static/videos/trashbin_Date07_Sub08_trashbin_split_1_usd_6d_seperatecond_model000400000.pt_A woman held a trashbin and made a motion to dump the trash..webm"
+                        type="video/mp4">
+              </video>
+              <h2 style="font-size: 1em; margin-top: 10px; word-wrap: break-word;">A woman held a trashbin and made a motion to dump the trash.</h2>
+            </div>
+            <div style="width: 32%; margin-bottom: 2%; text-align: center;">
+              <video poster="" id="fullbody" autoplay controls muted loop playsinline style="width: 100%;">
+                <source src="./static/videos/suitcase_Date07_Sub04_suitcase_lift_split_4_usd_6d_seperatecond_model000400000.pt_The man holds the suitcase with both hands, keeping it flat and walking counterclockwise..webm"
+                        type="video/mp4">
+              </video>
+              <h2 style="font-size: 1em; margin-top: 10px; word-wrap: break-word;">The man holds the suitcase with both hands, keeping it flat and walking counterclockwise.</h2>
+            </div>
+          </div>
         </div>
       </div>
       <!--/ Visual Effects. -->
-
-      <!-- Matting. -->
-      <div class="column">
-        <h2 class="title is-3">Matting</h2>
-        <div class="columns is-centered">
-          <div class="column content">
-            <p>
-              As a byproduct of our method, we can also solve the matting problem by ignoring
-              samples that fall outside of a bounding box during rendering.
-            </p>
-            <video id="matting-video" controls playsinline height="100%">
-              <source src="./static/videos/matting.mp4"
-                      type="video/mp4">
-            </video>
-          </div>
-
-        </div>
-      </div>
-    </div>
-    <!--/ Matting. -->
-
-    <!-- Animation. -->
-    <div class="columns is-centered">
-      <div class="column is-full-width">
-        <h2 class="title is-3">Animation</h2>
-
-        <!-- Interpolating. -->
-        <!-- <h3 class="title is-4">Interpolating states</h3>
-        <div class="content has-text-justified">
-          <p>
-            We can also animate the scene by interpolating the deformation latent codes of two input
-            frames. Use the slider here to linearly interpolate between the left frame and the right
-            frame.
-          </p>
-        </div>
-        <div class="columns is-vcentered interpolation-panel">
-          <div class="column is-3 has-text-centered">
-            <img src="./static/images/interpolate_start.jpg"
-                 class="interpolation-image"
-                 alt="Interpolate start reference image."/>
-            <p>Start Frame</p>
-          </div>
-          <div class="column interpolation-video-column">
-            <div id="interpolation-image-wrapper">
-              Loading...
-            </div>
-            <input class="slider is-fullwidth is-large is-info"
-                   id="interpolation-slider"
-                   step="1" min="0" max="100" value="0" type="range">
-          </div>
-          <div class="column is-3 has-text-centered">
-            <img src="./static/images/interpolate_end.jpg"
-                 class="interpolation-image"
-                 alt="Interpolation end reference image."/>
-            <p class="is-bold">End Frame</p>
-          </div>
-        </div>
-        <br/> -->
-        <!--/ Interpolating. -->
-
-        <!-- Re-rendering. -->
-        <h3 class="title is-4">Re-rendering the input video</h3>
-        <div class="content has-text-justified">
-          <p>
-            Using <span class="dnerf">Nerfies</span>, you can re-render a video from a novel
-            viewpoint such as a stabilized camera by playing back the training deformations.
-          </p>
-        </div>
-        <div class="content has-text-centered">
-          <video id="replay-video"
-                 controls
-                 muted
-                 preload
-                 playsinline
-                 width="75%">
-            <source src="./static/videos/replay.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <!--/ Re-rendering. -->
-
-      </div>
-    </div>
-    <!--/ Animation. -->
-
 
     <!-- Concurrent Work. -->
     <!-- <div class="columns is-centered">
@@ -421,6 +407,35 @@ This paper addresses the challenging task of generating dynamic Human-Object Int
 </section>
 
 
+<!-- <section class="section">
+  <div class="container is-max-desktop content">
+    <h2 class="title">Comparison with other models</h2>
+    <div class="columns is-multiline">
+      <div style="width: 32%; margin-bottom: 2%; text-align: center;">
+        <video id="ours" autoplay controls muted loop playsinline style="width: 100%;">
+          <source src="./static/videos/mask.mp4" type="video/mp4">
+        </video>
+        <h2 style="font-size: 1em; margin-top: 10px; word-wrap: break-word;">MDM</h2>
+      </div>
+
+      <div style="width: 32%; margin-bottom: 2%; text-align: center;">
+        <video id="baseline" autoplay controls muted loop playsinline style="width: 100%;">
+          <source src="./static/videos/mask-nobg.mp4" type="video/mp4">
+        </video>
+        <h2 style="font-size: 1em; margin-top: 10px; word-wrap: break-word;">CHOIS</h2>
+      </div>
+
+      <div style="width: 32%; margin-bottom: 2%; text-align: center;">
+        <video id="ablation" autoplay controls muted loop playsinline style="width: 100%;">
+          <source src="./static/videos/ablation.webm" type="video/mp4">
+        </video>
+        <h2 style="font-size: 1em; margin-top: 10px; word-wrap: break-word;">Ours</h2>
+      </div>
+    </div>
+  </div>
+</section> -->
+
+
 <!-- <section class="section" id="BibTeX">
   <div class="container is-max-desktop content">
     <h2 class="title">BibTeX</h2>
@@ -436,15 +451,7 @@ This paper addresses the challenging task of generating dynamic Human-Object Int
 
 <footer class="footer">
   <div class="container">
-    <div class="content has-text-centered">
-      <a class="icon-link"
-         href="./static/videos/nerfies_paper.pdf">
-        <i class="fas fa-file-pdf"></i>
-      </a>
-      <a class="icon-link" href="https://github.com/keunhong" class="external-link" disabled>
-        <i class="fab fa-github"></i>
-      </a>
-    </div>
+
     <div class="columns is-centered">
       <div class="column is-8">
         <div class="content">
@@ -453,13 +460,7 @@ This paper addresses the challenging task of generating dynamic Human-Object Int
                                                 href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
             Commons Attribution-ShareAlike 4.0 International License</a>.
           </p>
-          <p>
-            This means you are free to borrow the <a
-              href="https://github.com/nerfies/nerfies.github.io">source code</a> of this website,
-            we just ask that you link back to this page in the footer.
-            Please remember to remove the analytics code included in the header of the website which
-            you do not want on your website.
-          </p>
+
         </div>
       </div>
     </div>
